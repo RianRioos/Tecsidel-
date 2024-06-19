@@ -1,0 +1,213 @@
+main {
+  margin-top: 94px;
+  margin-left: 200px;
+  transition: all 0.3s ease-out;
+}
+
+img {
+  object-fit: cover;
+}
+
+.container-primary-cam {
+  display: flex;
+  margin-left: 45px;
+
+  & .list-cam-info {
+    position: absolute;
+    height: 50px;
+    width: 250px;
+    background-color: #000000;
+    border-radius: 8px;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr auto auto auto auto auto;
+    align-items: center;
+    gap: 5px;
+    top: calc(100% - 50px);
+    font-size: 20px;
+    opacity: 0.8;
+
+    & p {
+      padding-left: 10px;
+      margin: 0;
+    }
+  }
+}
+
+.container-cam {
+  display: flex;
+  flex-direction: column;
+  gap: 39px;
+
+  & .container-img-cam {
+    display: contents;
+    position: relative;
+
+    & .list-cam-info {
+      position: absolute;
+      height: 30px;
+      width: 192px;
+      background-color: #000000;
+      border-radius: 4px;
+      color: #ffffff;
+      display: grid;
+      grid-template-columns: 1fr auto auto auto auto auto;
+      align-items: center;
+      gap: 5px;
+      opacity: 0.8;
+    }
+
+    & .sup {
+      top: calc(50% - 50px);
+    }
+
+    & .bot {
+      bottom: 0px;
+    }
+
+    & p {
+      padding-left: 10px;
+      margin: 0;
+    }
+  }
+}
+
+.swiper-container {
+  margin-top: 58px;
+}
+
+.swiper-container-outer {
+  position: relative;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+}
+
+.swiper-button-next {
+  right: -100px;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.relative-img {
+  position: relative;
+}
+
+.container-primary-cam {
+  margin-right: 45px;
+
+  & .primary-cam {
+    width: 600px;
+  }
+  & .container-statistics {
+    width: calc(100% - 600px);
+    margin: 0 0 0 10px;
+    padding: 20px 10px;
+    background: #d9d9d9;
+    display: flex;
+    gap: 15px;
+
+    & .info-primary {
+      width: 50%;
+      & h2 {
+        font-size: 20px;
+        margin: 0 0 16px 0;
+      }
+      & h3 {
+        font-size: 16px;
+        margin: 0;
+      }
+      
+      & .Velocidade {
+        font-size: 40px;
+        font-weight: 800;
+      }
+      
+      & .placa {
+        font-size: 24px;
+        font-weight: 800;
+      }
+      
+      & .status {
+        font-size: 24px;
+        font-weight: 800;
+      }
+      & span {
+        font-size: 20px;
+      }
+    }
+
+    & .info-complementaria {
+      margin-top: 40px;
+
+      & h3 {
+        font-size: 20px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    margin-top: 94px;
+    margin-left: 0;
+  }
+  .container-primary-cam {
+    & .list-cam-info {
+      height: 30px;
+      width: 180px;
+      border-radius: 5px;
+      font-size: 16px;
+      top: calc(100% - 30px);
+    }
+  }
+
+  .container-cam {
+    & .container-img-cam {
+      & .list-cam-info {
+        width: 180px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 580px){
+  .info-complementaria {
+    display: none;
+  }
+}
+
+@media only screen and (min-width:1100px) and (max-width:1250px) {
+  .info-complementaria {
+    display: none;
+  }
+}
+
+@media only screen and (-width:400px) and (max-width:900px) {
+  
+}
+
+@media only screen and (max-width: 1100px) {
+  .container-primary-cam {
+    flex-direction: column;
+    height: auto;
+
+    & .primary-cam {
+      width: 100%;
+    }
+
+    & .container-statistics {
+      width: 100%;
+      margin: 10px 0 0 0;
+      padding: 20px 30px;
+      background: #d9d9d9;
+    }
+  }
+}
